@@ -6,7 +6,6 @@ require (
 	github.com/fatih/color v1.9.0
 	github.com/gobuffalo/flect v0.2.2
 	github.com/google/go-cmp v0.5.2
-	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/onsi/ginkgo v1.14.1
 	github.com/onsi/gomega v1.10.2
 	github.com/spf13/cobra v1.1.1
@@ -20,3 +19,4 @@ require (
 	sigs.k8s.io/yaml v1.2.0
 )
 
+replace sigs.k8s.io/controller-tools => github.com/minio/controller-tools v0.4.4
