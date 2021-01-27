@@ -24,8 +24,8 @@ import (
 
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/minio/controller-tools/pkg/loader"
+	"github.com/minio/controller-tools/pkg/markers"
 )
 
 // Schema flattening is done in a recursive mapping method.

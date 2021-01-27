@@ -24,13 +24,13 @@ import (
 	"path/filepath"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/minio/controller-tools/pkg/crd"
+	crdmarkers "github.com/minio/controller-tools/pkg/crd/markers"
+	"github.com/minio/controller-tools/pkg/genall"
+	"github.com/minio/controller-tools/pkg/loader"
+	"github.com/minio/controller-tools/pkg/markers"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"sigs.k8s.io/controller-tools/pkg/crd"
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
-	"sigs.k8s.io/controller-tools/pkg/genall"
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
 )
 
 var _ = Describe("CRD Generation proper defaulting", func() {

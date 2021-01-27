@@ -30,8 +30,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"sigs.k8s.io/controller-tools/pkg/genall"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/minio/controller-tools/pkg/genall"
+	"github.com/minio/controller-tools/pkg/markers"
 )
 
 // The default {Mutating,Validating}WebhookConfiguration version to generate.

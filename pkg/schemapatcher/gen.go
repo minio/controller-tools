@@ -29,12 +29,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	kyaml "sigs.k8s.io/yaml"
 
-	crdgen "sigs.k8s.io/controller-tools/pkg/crd"
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
-	"sigs.k8s.io/controller-tools/pkg/genall"
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
-	yamlop "sigs.k8s.io/controller-tools/pkg/schemapatcher/internal/yaml"
+	crdgen "github.com/minio/controller-tools/pkg/crd"
+	crdmarkers "github.com/minio/controller-tools/pkg/crd/markers"
+	"github.com/minio/controller-tools/pkg/genall"
+	"github.com/minio/controller-tools/pkg/loader"
+	"github.com/minio/controller-tools/pkg/markers"
+	yamlop "github.com/minio/controller-tools/pkg/schemapatcher/internal/yaml"
 )
 
 // NB(directxman12): this code is quite fragile, but there are a sufficient
@@ -434,7 +434,7 @@ func crdsFromDirectory(ctx *genall.GenerationContext, dir string) (map[schema.Gr
 		groupKind := schema.GroupKind{Group: actualCRD.Spec.Group, Kind: actualCRD.Spec.Names.Kind}
 		var versions map[string]struct{}
 		if len(actualCRD.Spec.Versions) == 0 {
-			versions = map[string]struct{}{actualCRD.Spec.Version: struct{}{}}
+			versions = map[string]struct{}{actualCRD.Spec.Version: {}}
 		} else {
 			versions = make(map[string]struct{}, len(actualCRD.Spec.Versions))
 			for _, ver := range actualCRD.Spec.Versions {

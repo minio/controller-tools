@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/minio/controller-tools/pkg/typescaffold"
 	"github.com/spf13/cobra"
-	"sigs.k8s.io/controller-tools/pkg/typescaffold"
 )
 
 func main() {

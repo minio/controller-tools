@@ -25,8 +25,8 @@ import (
 	"golang.org/x/tools/go/packages"
 	"sigs.k8s.io/yaml"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/minio/controller-tools/pkg/loader"
+	"github.com/minio/controller-tools/pkg/markers"
 )
 
 // Generators are a list of Generators.

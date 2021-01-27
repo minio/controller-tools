@@ -22,7 +22,7 @@ import (
 	"strings"
 	"sync"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
+	"github.com/minio/controller-tools/pkg/loader"
 )
 
 // Collector collects and parses marker comments defined in the registry
