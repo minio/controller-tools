@@ -1,4 +1,4 @@
-module sigs.k8s.io/controller-tools
+module github.com/minio/controller-tools
 
 go 1.15
 
